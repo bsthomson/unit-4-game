@@ -1,0 +1,18 @@
+img {
+max-width: 250px
+}
+
+.image {
+    position: relative;
+    text-align: center;
+    color: white;
+    
+}
+
+.centered {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: blue;
+}

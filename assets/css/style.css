@@ -6,6 +6,7 @@ max-width: 250px
     position: relative;
     text-align: center;
     color: white;
+    height: 206px;
 }
 
 .character {

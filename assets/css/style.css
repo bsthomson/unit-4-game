@@ -6,7 +6,11 @@ max-width: 250px
     position: relative;
     text-align: center;
     color: white;
-    
+}
+
+.character {
+    height: 200px;
+    width: 200px;
 }
 
 .centered {
@@ -15,4 +19,12 @@ max-width: 250px
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: blue;
+}
+
+.lower {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: black;
 }

@@ -5,41 +5,45 @@ $( document ).ready(function() {
     var enemyCounter = 3;
     var centerGoodEmpty = true;
     var centerBadEmpty = true;
-    
-    var travelingSeamstress = {
-        HP: 150,
-        attack: 30,
-        counterAttack: 10,
-    };
-    
-    var evilYetiHP = {
-        HP: 210,
-        attack: 25,
-        counterAttack: 5,
-    };
+    var goodGuy;
+    var badGuy;
 
-    var docSkullHP = {
-        HP: 200,
-        attack: 25,
-        counterAttack: 5,
-    }
+    var characters = { 
+        "travelingSeamstress": {
+            HP: 150,
+            attack: 30,
+            counterAttack: 10,
+        },
+        
+        "evilYeti": {
+            HP: 210,
+            attack: 25,
+            counterAttack: 5,
+        },
 
-    var dropBearHP = {
-        HP: 90,
-        attack: 50,
-        counterAttack: 25,
-    };
+        "docSkull": {
+            HP: 200,
+            attack: 25,
+            counterAttack: 5,
+        },
 
-    var rootHP = {
-        HP: 110,
-        attack: 35,
-        counterAttack: 10,
-    };
+        "dropBear": {
+            HP: 90,
+            attack: 50,
+            counterAttack: 25,
+        },
 
-    var clamDwarfHP = {
-        HP: 50,
-        attack: 100,
-        counterAttack: 2,
+        "root": {
+            HP: 110,
+            attack: 35,
+            counterAttack: 10,
+        },
+
+        "clamDwarf": {
+            HP: 50,
+            attack: 100,
+            counterAttack: 2,
+        },
     };
 
 
@@ -50,15 +54,19 @@ $( document ).ready(function() {
             $(this).appendTo(".goodduel");
             // Ensures player can't pick a new character
             centerGoodEmpty=false;
+            console.log($("goodduel".children("good".children("id"))))
         };
-            // Function to move player's enemy to the middle
-            $(".bad").on("click", function() {
-                if (centerBadEmpty==true) {
-                    $(this).appendTo(".badduel");
-                    // Ensures player can't pick a new enemy
-                    centerBadEmpty=false;
-                };
-            });
-    });
-        
+    
+        // Function to move player's enemy to the middle
+        $(".bad").on("click", function() {
+            if (centerBadEmpty==true) {
+                $(this).appendTo(".badduel");
+                // Ensures player can't pick a new enemy
+                centerBadEmpty=false;
+                $(".character").on("click", function() {
+                    console.log(this.HP);
+                })
+            };
+        });
+    }); 
 });
